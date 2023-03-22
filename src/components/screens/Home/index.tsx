@@ -1,7 +1,10 @@
 import Layout from "@/components/layout";
-import { NextPage } from "next";
+import { PostsService } from "@/services/posts-service";
+import { GetServerSideProps, NextPage } from "next";
+import { FC } from "react";
 
-const HomePage: NextPage = () => {
+const HomePage: FC = ({ posts }) => {
+  console.log(posts);
   return (
     <Layout title="Home" description="Home page">
       <h1>Welcome</h1>

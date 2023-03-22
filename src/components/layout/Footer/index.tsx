@@ -2,9 +2,10 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
-import RestoreIcon from "@mui/icons-material/Restore";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
+import WhatshotIcon from "@mui/icons-material/Whatshot";
+import FiberNewIcon from "@mui/icons-material/FiberNew";
+import StarIcon from "@mui/icons-material/Star";
+import StackedLineChartIcon from "@mui/icons-material/StackedLineChart";
 import { FC } from "react";
 
 const Footer: FC = () => {
@@ -19,9 +20,10 @@ const Footer: FC = () => {
           setValue(newValue);
         }}
       >
-        <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-        <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-        <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
+        <BottomNavigationAction label="Hot" icon={<WhatshotIcon />} />
+        <BottomNavigationAction label="New" icon={<FiberNewIcon />} />
+        <BottomNavigationAction label="Top" icon={<StarIcon />} />
+        <BottomNavigationAction label="Rise" icon={<StackedLineChartIcon />} />
       </BottomNavigation>
     </Box>
   );
