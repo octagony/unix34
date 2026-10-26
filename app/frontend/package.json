@@ -1,0 +1,33 @@
+{
+  "name": "unix34-frontend",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "@nuxt/fonts": "^1.2.0",
+    "@primeuix/themes": "^3.1.0",
+    "nuxt": "^4.6.2",
+    "primevue": "^5.0.4",
+    "vue": "^3.5.44",
+    "vue-router": "^5.4.0"
+  },
+  "devDependencies": {
+    "@primevue/nuxt-module": "^5.0.4",
+    "@types/node": "^26.6.5",
+    "eslint": "^10.13.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.10",
+    "typescript": "^7.0.2",
+    "vue-tsc": "^3.3.13"
+  }
+}
