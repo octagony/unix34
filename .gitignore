@@ -21,4 +21,16 @@ logs
 # Local env files
 .env
 .env.*
+.envrc
+env.bak/
 !.env.example
+
+# Environments
+.venv
+venv/
+ENV/
+venv.bak/
+
+#IDE
+.vscode
+.idea
