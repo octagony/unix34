@@ -5,7 +5,7 @@ from schemas import PostResponse, PostsListResponse, PostTagResponse
 
 router = APIRouter(prefix="/posts", tags=["Posts"])
 
-@router.get("/", response_model=PostsListResponse)
+@router.get("", response_model=PostsListResponse)
 async def get_posts(
     tags: List[str] = Query(default=[]),
     cursor: Optional[str] = Query(default=None),
@@ -81,7 +81,7 @@ async def get_posts(
         next_cursor=next_cursor
     )
 
-@router.get("/{reddit_id}", response_model=PostResponse)
+@router.get("{reddit_id}", response_model=PostResponse)
 async def get_post(reddit_id: str):
     response = supabase_reader.table("posts").select("""
         id, 

@@ -1,13 +1,15 @@
 import Aura from '@primeuix/themes/aura';
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
-  modules: ['@primevue/nuxt-module', '@nuxt/fonts', '@nuxtjs/tailwindcss'],
+  modules: ['@primevue/nuxt-module', '@nuxt/fonts', '@nuxtjs/color-mode', '@nuxt/ui'],
   typescript: {
     typeCheck: "build",
   },
   runtimeConfig: {
     public: {
       PRIMEUI_LICENSE: process.env.APP_FRONTEND_PRIMEUI_LICENSE,
+      apiBaseUrl: process.env.NUXT_PUBLIC_API_BASE_URL
     },
   },
   compatibilityDate: '2025-07-15',
@@ -22,6 +24,24 @@ export default defineNuxtConfig({
         },
       },
     },
+  },
+
+  alias: {
+    "@": "/<rootDir>/app",
+  },
+
+  css: ['~/assets/css/main.css'],
+
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
+  },
+
+  fonts: {
+    families: [
+      { name: 'Fira Code', provider: 'google', global: true }
+    ]
   },
 
   app: {

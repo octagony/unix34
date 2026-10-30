@@ -1,3 +1,5 @@
 <template>
-  <span class="text-3xl">test</span>
+   <UApp>
+    <NuxtPage />
+  </UApp>
 </template>

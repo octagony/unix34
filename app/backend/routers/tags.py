@@ -4,7 +4,7 @@ from schemas import TagResponse
 
 router = APIRouter(prefix="/tags", tags=["Tags"])
 
-@router.get("/", response_model=list[TagResponse])
+@router.get("", response_model=list[TagResponse])
 async def get_tags(category: str | None = None):
     query = supabase_reader.table("tags").select("*").order("name")
     

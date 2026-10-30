@@ -1,2 +1,52 @@
-@import 'tailwindcss';
-@import '@nuxt/ui';
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+  --font-fira: 'Fira Code', system-ui, -apple-system, sans-serif;
+
+  --color-background: #FFFFFF;
+  --color-surface: ##e6f3ff;
+  --color-surface-hover: #b3ddf2;
+  --color-border: #80c6e8;
+  --color-text-primary: #2c3e50;
+  --color-text-secondary: #80c6e8;
+  --color-text-muted: #b3ddf2;
+  --color-primary: #2c3e50;
+  --color-primary-hover: #80c6e8;
+
+  --ui-primary: var(--color-background);
+}
+
+.dark {
+  --color-background: #000000;
+  --color-surface: #808080;
+  --color-surface-hover: #A9A9A9;
+  --color-border: #DCDCDC;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #cbd5e1;
+  --color-text-muted: #DCDCDC;
+  --color-primary: #FFFFFF;
+  --color-primary-hover: #faf5f5;
+
+  --ui-bg: var(--color-background);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    font-family: var(--font-fira);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  *:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-background), 0 0 0 4px var(--color-primary);
+  }
+}

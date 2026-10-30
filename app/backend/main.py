@@ -22,9 +22,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(posts.router)
-app.include_router(tags.router)
-app.include_router(sync.router)
+app.include_router(posts.router, prefix="/api")
+app.include_router(tags.router, prefix="/api")
+app.include_router(sync.router, prefix="/api")
 
 @app.get("/")
 async def root():
