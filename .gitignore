@@ -31,6 +31,9 @@ venv/
 ENV/
 venv.bak/
 
+# Python
+__pycache__
+
 #IDE
 .vscode
 .idea
